@@ -16,12 +16,12 @@
                 <div class="container">
                     <img src="logo.png" alt="logo" />
                     <div>
-                        <select class="menu" @change="cambia">
-                            <option value="">genere</option>
-                            <option>rock</option>
-                            <option>jazz</option>
-                            <option>pop</option>
-                            <option>metal</option>
+                        <select class="menu" v-model="selected">
+                            <option>Tutti</option>
+                            <option>Rock</option>
+                            <option>Jazz</option>
+                            <option>Pop</option>
+                            <option>Metal</option>
                         </select>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
 
             <div class="cds-container container">
                 <!-- stampo su schermo tramite ciclo v-for tutti i cd-->
-                <div class="cd" v-for="cd in listaCd[0]">
+                <div class="cd" v-for="cd in listaCd[0]" v-if="selected == cd.genre || selected == 'Tutti'">
                     <!-- immagine album -->
                     <img :src="cd.poster" alt="">
                     <!-- titolo -->

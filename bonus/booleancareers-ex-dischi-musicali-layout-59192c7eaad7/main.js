@@ -4,7 +4,7 @@ let app = new Vue({
     el: "#app",
     data:{
         listaCd: [],
-        genere: false,
+        selected: "Tutti",
     },
     mounted(){
             axios.get("https://flynn.boolean.careers/exercises/api/array/music")
@@ -21,11 +21,5 @@ let app = new Vue({
 			}); 
 			//console.log(this.listaCd);
     },
-
-    methods:{
-        cambia(){
-
-        }
-    }
 
 });
