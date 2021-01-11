@@ -14,11 +14,14 @@ let app = new Vue({
                 //verifico lo stato della risposta
                 //console.log(response);
 				// stampo in console i cd
-				console.log(response.data.response);
+				//console.log(response.data.response);
+				//aggiungo i cd all'interno dell'array lista
+				this.listaCd.push(response.data.response)
 			})
 			.catch(function (error) {
-				console.log(error);
+				//console.log(error);
 			}); 
+			//console.log(this.listaCd);
         
     }
 });
