@@ -2,6 +2,23 @@
 // Servendoci di Vue JS stampiamo tutto a schermo.
 // In questo momento non è importante la parte grafica.
 
-$(document).ready(function() {
-	//Code
+let app = new Vue({
+    el: "#app",
+    data:{
+        listaCd: [],
+
+    },
+    mounted(){
+            axios.get("https://flynn.boolean.careers/exercises/api/array/music")
+            .then(response =>{
+                //verifico lo stato della risposta
+                //console.log(response);
+				// stampo in console i cd
+				console.log(response.data.response);
+			})
+			.catch(function (error) {
+				console.log(error);
+			}); 
+        
+    }
 });
