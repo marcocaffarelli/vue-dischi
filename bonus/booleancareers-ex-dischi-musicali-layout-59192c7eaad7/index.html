@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
@@ -14,8 +15,17 @@
             <header>
                 <div class="container">
                     <img src="logo.png" alt="logo" />
-                    <div class="menu">
-                        hard rock 
+                    <div class="menu" @click="appari">
+                        <div>
+                        genere
+                        <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <ul v-show="genere">
+                            <li>rock</li>
+                            <li>jazz</li>
+                            <li>pop</li>
+                            <li>metal</li>
+                        </ul>
                     </div>
                 </div>
             </header>

@@ -34,8 +34,21 @@ header img {
 
 .menu{
     background-color: white;
-    height: 50%;
+    height: 30%;
     width: 150px;
+    border: 1px solid black;
+}
+.menu:hover li{
+    display: block;
+}
+
+.menu li{
+    list-style: none;
+    background-color: white;
+    height: 100%;
+    width: 150px;
+    border: 1px solid black;
+    display: none;
 }
 
 .cds-container {
