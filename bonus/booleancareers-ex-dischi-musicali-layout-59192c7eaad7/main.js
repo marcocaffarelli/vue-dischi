@@ -23,13 +23,8 @@ let app = new Vue({
     },
 
     methods:{
-        //al click faccio comparire le opzioni del menu
-        appari(){
-            if (this.genere === false) {
-                this.genere = true
-            }else{
-                this.genere = false
-            }
+        cambia(){
+
         }
     }
 
